@@ -9,101 +9,66 @@ body {
   padding: 0;
 }
 
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-/* 2. Remove default margin for common elements */
-body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, ul, ol, dl, dt, dd {
-  margin: 0;
-}
-/*
-  3. Allow percentage-based heights in the application
-*/
-html, body {
-  height: 100%;
-}
-/*
-  4. Improve the typography across the site.
-*/
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-/* 5. Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-/* 6. Inherit fonts for inputs and buttons */
-input, button, textarea, select {
-  font: inherit;
-}
-/*
-  7. Create a root stacking context
-*/
-#__next {
-  isolation: isolate;
-}
 
 /* Add styles here! */
+html {
+  font-size: 1.125rem;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
 header {
-  background-color: hsl(0deg, 0%, 100%);
+  border-block-end: 8px solid hsl(0deg, 0%, 40%);
 }
 
 main {
   background-color: hsl(0deg, 0%, 60%);
-  border-block-start: 4px solid hsl(0deg, 0%, 40%);
-  min-height: 80%;
+  padding: 96px 0;
 }
 
 .max-width-wrapper {
-  max-width: 75%;
-  padding-block-start: 64px;
-  padding-block-end: 32px;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .intro-chunk {
-  max-width: 75%;
-  font-size: 1.25rem;
+  padding: 96px 0 48px;
+  max-width: 400px;
 }
 
-.title {
-  font-size: 1.75rem;
-  padding-block-start: 32px;
-  padding-block-end: 32px;
+.intro-chunk .title {
+  font-size: 2rem;
+  margin-block-end: 48px;
 }
 
-.intro-chunk p {
-  padding-block-end: 16px;
-}
-
-strong {
+.intro-chunk strong {
   color: hsl(160deg, 100%, 30%);
 }
 
 .card {
   background-color: hsl(0deg, 0%, 100%);
-  padding: 16px;
-  margin-inline-start: -16px;
-  border-block-end: 4px solid hsl(0deg, 0%, 40%);
+  padding: 24px;
+  margin: -24px;
+  border-block-end: 8px solid hsl(0deg, 0%, 40%);
+}
+
+.card p:last-child {
+  margin-block-end: 0;
 }
 
 .indented-heading {
   background-color: hsl(45deg, 100%, 50%);
-  border-block-end: 4px solid hsl(45deg, 100%, 40%);
-  max-width: max-content;
-  padding: 8px 32px;
-  font-size: 1.25rem;
-  margin-block-start: -8px;
   margin-inline-start: -32px;
-}
-
-.card p {
-  padding-block-start: 16px;
+  margin-block-start: -16px;
+  padding: 16px 32px;
+  max-width: max-content;
+  border-block-end: 8px solid hsl(45deg, 100%, 40%);
 }
